@@ -42,6 +42,7 @@ randomBtn.addEventListener('click',(e)=>{
   e.preventDefault;
   randomBtn.classList.add('jump');
   color = randomColor();
+  colorPicker.value = color;
   party = 1;
 })
 colorPicker.addEventListener('focus',(e)=>{
@@ -55,7 +56,7 @@ for(let i = 0; i < numOfCol; i++){
   
 
 function rain(){
-  
+  //prints characters from left to right till the end of the row
   for(let i = 0; i < numOfCol; i++){
     if(party == 0){
       ctx.fillStyle= colorPicker.value; 
@@ -63,6 +64,7 @@ function rain(){
       ctx.fillStyle= color;
       
     }else if(party==2){
+      colorPicker.value = randomColor();
       ctx.fillStyle= randomColor();
     }else{
       ctx.fillStyle= color;
@@ -80,19 +82,31 @@ function rain(){
   ctx.fillRect(0,0,winWidth,winHeight); 
 }
 
+setInterval(rain, 70);
+
+//picks a random character from possible characters
 function randomChar(){
   return possChars[0][Math.floor(Math.random()*possChars[0].length)]  
 }
-setInterval(rain, 70);
 
 //return random rgb color
 function randomColor(){  
-  return `rgb(${random255()},${random255()},${random255()})`
+  return rgbToHex(random255(),random255(),random255())
 }
 //pick random number from 0-255
 function random255(){
     return Math.floor(Math.random()*255)
- }
+}
+
+//both functions below are helper functions to convert rgb color to hex
+function componentToHex(c) {
+    var hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+  }
+
+function rgbToHex(r, g, b) {
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
 
 ///////////////////////////////
 //  HOROSCOPE FUNCTIONALITY  //
