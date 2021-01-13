@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Your description goes here">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Matrix Horoscope</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>         
+          <canvas id="my-canvas"></canvas>
+          <section class='wrapper'>
+            <section id='color-picker'>
+            
+              <h3 class='animate'>pick a color: </h3>
+              <input id='color' class='animate enlarge glow-shadow glow' type='color' value='#00ff00'>
+              <br>
+              <button id='random' class='color-btn animate'>random</button>
+              <br>
+              <h4> or </h4>
+              <br>
+              <button id='party' class='color-btn animate'>party</button>
+            
+              <section id='color1'></section>
+            </section>
+            <section id='enter-birthday'>
+                  <svg viewbox="0 0 100 60" width="100%">
+          <defs>
+            <mask id="mask" x="0" y="0" width="70%" height="100">
+              <rect x="0" y="0" width="100%" height="300" fill="rgba(255,255,255,.9)"/>
+              <rect x="15%" y="30%" width="70%" height="13" fill="rgba(0,0,0,.35)"/>
+              <rect x="15%" y="65%" width="70%" height="13" fill="rgba(0,0,0,.35)"/>
+            </mask>
+          </defs>
+          <rect x="0" y="0" width="400" height="1000" mask="url(#mask)" fill-opacity="1"/>    
+        </svg>   
+            <form>
+              <div>
+                <h1>Enter Your Birthday:</h1>  
+              </div>
+          
+              <div class='boxes'>
+              <input id='date' type='date' placeholder="yyyy-mm-dd">
+              <button id='get-character'class='animate'>Get Your Matrix Character</button>
+              </div>
+            </form>
+          </section>
+            <section id='horoscope'>
+              <section class='paragraph'>
+                <h2>You Are: </h2>
+                <section class='pic'>
+                  <img src=''>
+                </section>
+                <p> <!-- Horoscope Text --></p>
+              </section>
+            </section>
+          </section>
+      
+      
+        		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

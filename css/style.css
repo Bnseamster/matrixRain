@@ -1,0 +1,165 @@
+canvas{
+    width: 100vw; 
+    height:130vw; 
+    max-height: 100vh;
+    max-width:571.2237vh;
+    background: black;
+    z-index: -1;
+  }
+  *{
+    font-family: 'Orbitron', sans-serif;
+    color: green;
+    transition: all 1s ease-in-out;
+  }
+  #enter-birthday{
+    background: rgba(0,0,0,0);
+    width: 400px;
+    height: auto;
+    position: fixed;
+    top: 30%;
+    caret-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    transition: all 1s ease-in-out;
+  }
+  form{
+    text-align: center;
+  }
+  input{
+    border: none;
+    height: 50px;
+    background: rgba(0,0,0,0);
+    text-align: center;
+    width: 70%;
+    border-radius: 1px;
+    color: green;
+    box-shadow: inset 0 0 1px #3e3e3e;
+  }
+  #color-picker{
+    background: rgba(0,0,0,.8);
+    position: absolute;
+    top: 5vh;
+    left: 3vw;
+    width: auto;
+    height: auto;
+    padding: 1rem .5rem;
+    text-align: center;
+  }
+  #color{
+    width: 2.5vw;
+    height: 2.5vw;
+    position: relative;
+    top: 2%;
+    transition: all .05s ease-in-out;
+  }
+  #color-picker > *{
+    display: inline-block;
+  }
+  
+  h3{
+    margin: 0;
+    vertical-align: baseline;
+  }
+  .glow:hover{
+    color: rgb(142 216 142);
+  }
+  .enlarge:hover{
+    transform: scale(1.1);
+  }
+  .glow-shadow:hover{
+    box-shadow: 0 0 3px rgba(255,255,255,1);
+  }
+  h4{
+    margin: 1vh 0;
+  }
+  .color-btn{
+    margin: 0;
+    padding: 0 0;
+    height: 10vh;
+    max-height: 3.5rem; 
+    
+  }
+  #random{
+    margin-top: 2vh;
+  }
+  input#color{
+  
+  }
+  input:focus{
+    outline: none;
+    
+  }
+  i{
+    color: white;
+  }
+  
+  ::selection {
+    background: green;
+    color: white; 
+  }
+  button{
+    background: rgba(0,0,0,0);
+    border: none;
+    margin: 2rem 0;
+    width: 70%;
+    padding: 1rem;
+    height: 50px;
+    box-shadow: inset 0 0 1px #3e3e3e;
+    transition: all .1s ease-in-out;
+  }
+  button:hover{
+    color: rgb(142 216 142);
+  }
+  button:focus{
+    outline: none;
+  }
+  .boxes{
+    position: absolute;
+    top: 35%;
+    left: 0;
+  }
+  svg{
+    position:ablsolute;
+  }
+  h1{
+    position: absolute;
+    top:13%;
+    left: 23.5%;
+    text-align: center;
+  }
+  .jump{
+    transform: scale(.95)
+  }
+  .wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  #horoscope{
+    background: rgba(0,0,0,.7);
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 4vw;
+    transition: all 1s ease-in-out;
+  }
+  
+  .pic{
+    height: 45vh;
+    width: 50%;
+    text-align: center;
+  }
+  img{
+    height: 45vh;
+    object-fit: cover;
+  }
+  p{
+    width: 75%;
+    max-height: 55vh;
+  }
